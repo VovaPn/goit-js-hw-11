@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+background-color: violet;
+  color: #212121;
+  line-height: 1.5;
+  padding: 15px;
+  max-width: 1200px;
+
+}
+
+#search-box {
+  font: inherit;
+  padding: 8px;
+  max-width: 320px;
+  margin-bottom: 16px;
+}
+
+.header{ 
+  background-color: rgb(255, 4, 142);
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+
+
+}
+.search-form{
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+input{
+  height: 30px;
+  margin-right: 25px;
+  background-color: palevioletred;
+  color: rgb(255, 136, 0);
+  box-shadow: -5px -5px 15px yellow;
+}
+input:hover{
+  background-color: rgb(15, 2, 7);
+    color: rgb(6, 232, 248);
+    box-shadow: -5px -5px 15px rgb(39, 2, 247);
+}
+input::placeholder {
+  color: greenyellow
+}
+button{
+  height: 30px;
+  background-color: purple;
+  border-color: lime;
+  border-radius: 11%;
+  color: yellow;
+  box-shadow: 5px 5px 15px rgb(0, 255, 64);
+}
+button:hover{
+  background-color: rgb(2, 250, 2);
+  border-color: rgb(255, 0, 0);
+  border-radius:100%;
+  color: rgb(43, 7, 85);
+  box-shadow: 5px 5px 15px rgb(47, 0, 255);
+
+}
+.load-more{  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: darkblue;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 8px 15px rgb(0, 0, 0);
+  margin-top: 20px;
+}
+.load-more:hover{
+  background-color: yellow;
+  color: navy;
+  box-shadow: 0px 8px 15px rgb(248, 0, 0);
+}
+
+.gallery{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-top: 10px;
+
+}
+.image-card{
+  background-color: aliceblue;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border:1px solid #990909;
+  box-shadow: 0px 8px 15px rgb(56, 9, 133)
+}
+.image-card:hover{
+box-shadow: 0px 8px 15px rgb(7, 241, 46)
+}
+
+.text-content{
+  display: flex;
+
+justify-content: space-between;
+align-items: center;
+}
+
+.hidden{
+  display: none;
+}
+a{
+  text-decoration: none;
+  color:green;
+}

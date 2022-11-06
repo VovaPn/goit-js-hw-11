@@ -10,7 +10,7 @@ const form = getEl('.search-form');
 const gallery = getEl('.gallery');
 const loadMoreButton = getEl('.load-more');
 let pageAmount = 1;
-
+let page = 1;
 
 document.querySelectorAll('.header-heading-letters').forEach(el => el.style.color = getRandomHexColor());
 
@@ -18,6 +18,7 @@ const submitFunction=()=> {
   event.preventDefault();
   gallery.innerHTML = ''; 
   page = 1;
+  
   mamaFunction().then(result => {
     pageAmount = Math.floor(result.totalHits / 40);
     console.log(pageAmount);
@@ -33,11 +34,9 @@ const loadMoreFunction = () => {
   mamaFunction();   
 }
 function mamaFunction() {
-   return fetchImage(input.value).then(image => renderImages(image));
-  
- 
-  
+   return fetchImage(input.value).then(image => renderImages(image)); 
 }
+
 form.addEventListener('submit', submitFunction);
 
 loadMoreButton.addEventListener('click', loadMoreFunction);
@@ -51,6 +50,7 @@ function fetchImage(link) {
     }
   )
 }
+
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
@@ -86,7 +86,5 @@ function renderImages(image) {
   })
   }
   else { loadMoreButton.classList.add('hidden'); Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.") }
-  return image
-   
+  return image   
 }
-

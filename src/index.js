@@ -18,10 +18,9 @@ const submitFunction=()=> {
   event.preventDefault();
   gallery.innerHTML = ''; 
   page = 1;
-  
+
   mamaFunction().then(result => {
     pageAmount = Math.floor(result.totalHits / 40);
-    console.log(pageAmount);
     if (page > pageAmount) { loadMoreButton.classList.add('hidden') };
     if (result.totalHits > 0) { Notiflix.Notify.success(`Hooray! We found ${result.totalHits} images.`) };    
     if (result.totalHits > 40) { loadMoreButton.classList.remove('hidden') };
